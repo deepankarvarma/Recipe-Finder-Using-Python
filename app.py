@@ -3,22 +3,24 @@ import requests
 import pandas as pd
 
 st.set_page_config(page_title="Recipe Finder", page_icon="🍴")
+
 st.markdown(
-         f"""
-         <style>
-         .stApp {{
-             background-image: url("https://4kwallpapers.com/images/wallpapers/ios-13-stock-ipados-dark-green-black-background-amoled-ipad-2560x1440-794.jpg");
-             background-attachment: fixed;
-             background-size: cover
-         }}
-         </style>
-         """,
-         unsafe_allow_html=True
-     )
+    f"""
+    <style>
+    .stApp {{
+        background-image: url("https://4kwallpapers.com/images/wallpapers/ios-13-stock-ipados-dark-green-black-background-amoled-ipad-2560x1440-794.jpg");
+        background-attachment: fixed;
+        background-size: cover
+    }}
+    </style>
+    """,
+    unsafe_allow_html=True
+)
+
 st.title("Recipe Finder")
 
 def get_recipes(ingredients, diet):
-    # api_key = "<your-api-key>"
+    # api_key = "<your-api-key"
     url = "https://api.spoonacular.com/recipes/complexSearch"
     params = {
         "apiKey": st.secrets["api_key"],
@@ -45,9 +47,7 @@ def main():
                 df = df[["title", "readyInMinutes", "servings", "sourceUrl"]]
                 st.write(df)
         else:
-            st.write("Enter atleast one ingredient")
-        
-        
+            st.write("Enter at least one ingredient")
 
 if __name__ == "__main__":
     main()
