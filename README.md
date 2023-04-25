@@ -1,4 +1,4 @@
-# README for Recipe Finder using Python Streamlit
+# Recipe Finder using Python Streamlit
 
 ## Overview
 This repository contains code for a Recipe Finder app built using Python and Streamlit. The app allows users to search for recipes based on ingredients and dietary restrictions. It makes an API call to the Spoonacular API to retrieve recipe information and displays the results in a user-friendly interface.
